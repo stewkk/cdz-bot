@@ -1,0 +1,15 @@
+
+[Unit]
+Description=CDZ-bot service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/stewkk/cdz/build
+User=root
+OOMScoreAdjust=-100
+ExecStart=/home/stewkk/cdz/build/app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target 
